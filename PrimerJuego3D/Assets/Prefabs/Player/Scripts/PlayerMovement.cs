@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
             timeSinceLastForce = 0f;
         }
 
-        MovePlayer();
     }
 
     public void SetMovementStrategy(IMovementStrategy strategy)
@@ -35,9 +34,9 @@ public class PlayerMovement : MonoBehaviour
         movementStrategy = strategy;
     }
 
-    public void MovePlayer()
+    public void MovePlayer(float input)
     {
-        movementStrategy.Move(transform, player);
+        movementStrategy.Move(transform, player, input);
     }
 
     public void SetSmoothMovement()
