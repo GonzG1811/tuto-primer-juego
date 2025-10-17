@@ -9,7 +9,7 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         offSet = new Vector3(0, 1, -5);
 
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
 
     }
 
